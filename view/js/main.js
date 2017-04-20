@@ -172,18 +172,67 @@
 
 
 	// Document on load.
-	$(function(){
 
-		mobileMenuOutsideClick();
-		burgerMenu();
-		scrolledWindow();
-		
-		// Animations
-		contentWayPoint();
-		
-		
+	var initfunc = function () {
 
-	});
+        mobileMenuOutsideClick();
+        burgerMenu();
+        scrolledWindow();
+
+        // Animations
+        contentWayPoint();
+
+    }
+
+
+
+    var htmltmp =
+        '<article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">'+
+        '<figure>'+
+        '<a href="{bigImage}"><img src="{image}" alt="Image" class="img-responsive"></a>'+
+        '</figure>'+
+        '<span class="fh5co-meta"><a href=""></a></span>'+
+        '<h2 class="fh5co-article-title"><a href="#">{title}</a></h2>'+
+        '<span class="fh5co-meta fh5co-date"></span>'+
+        '</article>';
+
+
+    var init = function(){
+        var html ="";
+        $.ajax({
+
+            url:"/request",
+            success:function (data) {
+                var dt = $.parseJSON(data);
+                var bodys = dt.body;
+                bodys.forEach(function (v,i) {
+
+                    var  thumbnail =  v.thumbnail;
+                   var shareTitle = v.shareTitle.replace("凤凰新闻","");
+                    var urlimage = "#";
+                    if(v.img){
+                        urlimage =  v.img[0].url;
+                    }
+                    html += htmltmp.replace("{image}",thumbnail).replace("{bigImage}",urlimage).replace("{title}",shareTitle);
+                });
+                $("#datas").html(html);
+                initfunc();
+            }
+        })
+    };
+
+
+
+
+
+
+    // Document on load.
+    $(function(){
+        init();
+    });
+
+
+
 
 
 }());
