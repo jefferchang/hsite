@@ -1,0 +1,28 @@
+{
+  "name": "hsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefferchang/hsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jefferchang/hsite/issues"
+  },
+  "homepage": "https://github.com/jefferchang/hsite#readme",
+  "devDependencies": {
+    "charset": "^1.0.0",
+    "express": "^4.15.2",
+    "path": "^0.12.7",
+    "superagent": "^3.5.2"
+  },
+  "dependencies": {
+    "superagent-charset": "^1.1.1"
+  }
+}
