@@ -189,7 +189,7 @@
     var htmltmp =
         '<article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">'+
         '<figure>'+
-        '<a href="{bigImage}"><img src="{image}" alt="Image" class="img-responsive"></a>'+
+        '<a href="{image}"><img src="{bigImage}" alt="Image" class="img-responsive"></a>'+
         '</figure>'+
         '<span class="fh5co-meta"><a href=""></a></span>'+
         '<h2 class="fh5co-article-title"><a href="#">{title}</a></h2>'+
