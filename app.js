@@ -224,7 +224,7 @@ function getIP(tag) {
 }
 
 app.use(express.static(path.join(__dirname, 'view')));
-app.listen(3000);
+app.listen(80);
 console.log("启动完成");
 
  
