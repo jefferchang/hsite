@@ -9,13 +9,15 @@ var cheerio = require('cheerio');
 charset(superagent);
 
 
-
+var i = 0;
 var url = "http://www.ssss82.com/s01/index.html";
 
 var urlFix = "http://www.ssss82.com";
 
 
 app.get('/listav', function (req, r) {
+
+    console.log(i++);
     var targetUrl = url;
     superagent.get(targetUrl)
         .charset('utf-8')
