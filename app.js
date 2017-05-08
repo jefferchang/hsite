@@ -50,9 +50,25 @@ app.get('/listav', function (req, r) {
 });
 
 
-
-
-
+/**
+ * netstreambasepath=http%3A%2F%2Flocalhost%3A81%2FHLSprovider%2Fjwplayer5%2Findex58011.html&amp;
+ * id=player&amp;hls_debug=false&amp;
+ * hls_debug2=false&amp;
+ * hls_lowbufferlength=3&amp;
+ * hls_minbufferlength=-1&amp;
+ * hls_maxbufferlength=60&amp;
+ * hls_startfromlowestlevel=true&amp;
+ *
+ * hls_seekfromlowestlevel=true&amp;
+ * hls_live_flushurlcache=false&amp;
+ * hls_live_seekdurationthreshold=60&amp;
+ * hls_seekmode=ACCURATE&amp;
+ * provider=/swf/HLS.swf&amp;
+ * file=http://107.167.9.200:8011/B0425/s137/s137.m3u8&amp;
+ * qualitymonitor.pluginmode=FLASH&amp;
+ * controlbar.position=over&amp;
+ * image=/pic/0425/f736hayr.jpg
+ */
 
 app.get('/detail', function (req, r) {
 
@@ -61,7 +77,15 @@ app.get('/detail', function (req, r) {
     var emh0  = '<div class="text-center"><a href="{href}" class="btn-primary btn">播放</a></div>';
     var emhtml1 =  '<embed id="CuPlayerVideo_video_embed1" src="http://www.ssss82.com/swf/HLSplayer.swf?v=1.5" type="application/x-shockwave-flash"'+
         'allowscriptaccess="always" allowfullscreen="true" width="300" height="100"'+
-        'flashvars="netstreambasepath=id=player&amp;provider=http://www.ssss82.com/swf/HLS.swf' +
+        'flashvars="netstreambasepath=id=player&amp;&amp;hls_debug=false&amp;hls_debug2=false&amp;'+
+        'hls_lowbufferlength=3&amp;'+
+        'hls_minbufferlength=-1&amp;'+
+        'hls_maxbufferlength=60&amp;'+
+        'hls_startfromlowestlevel=true&amp;'+
+        'hls_seekfromlowestlevel=true&amp;'+
+        'hls_live_flushurlcache=false&amp;'+
+        'hls_live_seekdurationthreshold=60&amp;'+
+        'hls_seekmode=ACCURATE&amp;provider=http://www.ssss82.com/swf/HLS.swf' +
         '&amp;file=';
 
     var emhtml2 = '&amp;qualitymonitor.pluginmode=FLASH&amp;controlbar.position=over&amp;image=http://www.ssss82.com';
