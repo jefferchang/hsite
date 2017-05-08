@@ -77,7 +77,7 @@ app.get('/detail', function (req, r) {
     var emh0  = '<div class="text-center"><a href="{href}" class="btn-primary btn">播放</a></div>';
     var emhtml1 =  '<embed id="CuPlayerVideo_video_embed1" src="http://www.ssss82.com/swf/HLSplayer.swf?v=1.5" type="application/x-shockwave-flash"'+
         'allowscriptaccess="always" allowfullscreen="true" width="300" height="100"'+
-        'flashvars="netstreambasepath=id=player&amp;&amp;hls_debug=false&amp;hls_debug2=false&amp;'+
+        'flashvars="netstreambasepath=id=player&amp;hls_debug=false&amp;hls_debug2=false&amp;'+
         'hls_lowbufferlength=3&amp;'+
         'hls_minbufferlength=-1&amp;'+
         'hls_maxbufferlength=60&amp;'+
